@@ -1,13 +1,43 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import Navbar from "@/components/landing/Navbar";
+import Hero from "@/components/landing/Hero";
+import Services from "@/components/landing/Services";
+import Testimonials from "@/components/landing/Testimonials";
+import Contact from "@/components/landing/Contact";
+import Footer from "@/components/landing/Footer";
 
 const Index = () => {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "MedicalBusiness",
+    name: "Psicólogos en Medellín",
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Medellín",
+      addressCountry: "CO",
+    },
+    areaServed: "Medellín, Colombia",
+    url: "/",
+    telephone: "+57 301 681 8845",
+    image: "/favicon.ico",
+    sameAs: ["https://wa.me/573016818845"],
+    medicalSpecialty: "MentalHealthCare",
+  };
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
-    </div>
+    <>
+      <Navbar />
+      <main>
+        <section id="nosotros" className="sr-only">
+          <h1>Psicólogos en Medellín: terapia psicológica integral</h1>
+        </section>
+        <Hero />
+        <Services />
+        <Testimonials />
+        <Contact />
+      </main>
+      <Footer />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+    </>
   );
 };
 
