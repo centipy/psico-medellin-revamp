@@ -1,7 +1,9 @@
+import { Facebook, Twitter, Instagram } from "lucide-react";
+
 export default function Footer() {
   return (
     <footer className="mt-16 bg-primary text-primary-foreground">
-      <div className="container py-10 grid md:grid-cols-3 gap-8">
+      <div className="container py-10 grid md:grid-cols-4 gap-8">
         <div>
           <p className="font-display text-lg">Psicólogos en Medellín</p>
           <p className="text-sm opacity-90 mt-2">Atención presencial y online.</p>
@@ -16,6 +18,20 @@ export default function Footer() {
           <p>Medellín, Colombia</p>
           <p>Tel: (604) 322 2595</p>
           <p>Cel: +57 301 681 8845</p>
+        </div>
+        <div className="text-sm">
+          <p className="mb-3 font-medium">Síguenos</p>
+          <div className="flex items-center gap-3">
+            <a href="https://www.facebook.com/psicologosencolombia/" target="_blank" rel="noopener noreferrer" aria-label="Facebook Psicólogos en Medellín" title="Facebook">
+              <Facebook className="h-5 w-5" />
+            </a>
+            <a href="https://x.com/PsiclogosenCol1" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter) Psicólogos en Medellín" title="X (Twitter)">
+              <Twitter className="h-5 w-5" />
+            </a>
+            <a href="https://www.instagram.com/psicologos_en_colombia" target="_blank" rel="noopener noreferrer" aria-label="Instagram Psicólogos en Medellín" title="Instagram">
+              <Instagram className="h-5 w-5" />
+            </a>
+          </div>
         </div>
       </div>
       <div className="border-t border-primary-foreground/20">
